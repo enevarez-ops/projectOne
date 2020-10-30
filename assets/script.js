@@ -1,16 +1,21 @@
 $(document).ready(function(){
  var randomREl = document.getElementById("#randomR");
+    
+function getRecipeRepos() {
     var requestUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
-var randomRecipe = function getRecipeRepos(){
-   url: requestUrl
-   method: GET 
-   .then(function(data){
-       console.log(data); 
-       var randomBtn = $("<button>")
-       randomBtn.addClass("")
+    fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+     var randomBtn = $("<button>").text(data.strMeal + data.strInstructions)
+       $("#recipeCard").append(randomBtn);
+      
    })
 
 
 }
   
   });
+  $("#randomR").on("click", getRecipeRepos);
