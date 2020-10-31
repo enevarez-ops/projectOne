@@ -34,7 +34,7 @@ $(document).ready(function(){
   //then call call getRandomMusic("Lose Yourself")
 
 function getRandomMusic() {
-fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=", {
+fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -49,8 +49,8 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=", {
 .catch(err => {
 	console.log(err);
 
-      var randomMusicEl = $("<audio>").text("Your song: " + data[0].artist.title + " " + data[0].artist.link)
-      $("musicChoice").append(randomMusicEl)
+      var randomMusicEl = $("<audio>").text("Your song: " + data.data[0].artist.title + " " + data.data[0].artist.link);
+      $("musicChoice").append(randomMusicEl);
     });
   }
 
