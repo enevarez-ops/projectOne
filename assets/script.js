@@ -1,6 +1,6 @@
 $(document).ready(function(){
  var randomREl = document.getElementById("#randomR");
-    
+ var recipeEl = document.getElementById("#recipeCard")   
 function getRecipeRepos() {
     var requestUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
     fetch(requestUrl)
@@ -10,7 +10,7 @@ function getRecipeRepos() {
     .then(function (data) {
       console.log(data);
      var randomBtn = $("<button>").text(data.strMeal + data.strInstructions)
-       $("#recipeCard").append(randomBtn);
+       $("#randomR").append(randomBtn);
       
    })
 
