@@ -19,3 +19,16 @@ function getRecipeRepos() {
   
   });
   $("#randomR").on("click", getRecipeRepos);
+
+$(document).ready(function () {
+
+
+
+
+
+
+
+
+
+
+})
