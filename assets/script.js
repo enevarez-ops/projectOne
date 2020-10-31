@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-$(document).ready(function () {
-
-
-
-
-});
-=======
 $(document).ready(function(){
  var randomREl = document.getElementById("#randomR");
     
@@ -27,5 +19,5 @@ function getRecipeRepos() {
 }
   
   });
-  $("#randomR").on("click", getRecipeRepos);
->>>>>>> 60165a0e9f3f527956fabf0ea1b0459be2e529b8
+
+$("#randomR").on("click", getRecipeRepos);
