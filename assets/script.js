@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> c91eec0a23d68ea91742f4f9eecece9198a005d2
 $(document).ready(function(){
   var randomREl = document.getElementById("#randomR");
   var recipeEl = document.getElementById("#recipeChoice");   
@@ -32,7 +28,7 @@ $(document).ready(function(){
   }
 
 //var songArry = ["lose yourself", "other song"]
-//function getsRandomSong() {
+//function getsRandomSong() {s
   // get a random song title from Song array
 
   //then call call getRandomMusic("Lose Yourself")
@@ -53,16 +49,12 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
 .catch(err => {
 	console.log(err);
 
-      var randomMusicEl = $("<audio>").text("Your song: " + data.data[0].artist.title + " " + data.data[0].artist.link);
-      $("musicChoice").append(randomMusicEl);
+      var randomMusicEl = text("Your song: " + data[0].title + " " + data[0].link);
+      $("#musicChoice").append(randomMusicEl);
     });
   }
 
   });
 
-<<<<<<< HEAD
-$("#randomR").on("click", getRecipeRepos);
-=======
-  $("#randomR").on("click", getRecipeRepos);
+//   $("#randomR").on("click", callFunction);
 
->>>>>>> c91eec0a23d68ea91742f4f9eecece9198a005d2
