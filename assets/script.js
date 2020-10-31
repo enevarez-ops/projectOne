@@ -22,6 +22,8 @@ $(document).ready(function(){
       console.log(data);
      var randomEl = $("<div>").text(data.meals[0].strMeal + data.meals[0].strInstructions + data.meals[0].strSource)
         $("#recipeChoice").append(randomEl);
+        var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
+        $("#recipePic").append(recipeImg);
       
    })
 
@@ -49,12 +51,12 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
 .catch(err => {
 	console.log(err);
 
-      var randomMusicEl = $("<audio>").text("Your song: " + data.data[0].artist.title + " " + data.data[0].artist.link);
+      var randomMusicEl = $("<div>").text("Your song: " + data[0].artist.name + " " + data[0].link);
       $("musicChoice").append(randomMusicEl);
     });
   }
 
   });
 
-  $("#randomR").on("click", getRecipeRepos);
+ 
 
