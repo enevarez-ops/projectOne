@@ -55,5 +55,6 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
   }
 
   });
-  
+
+  $("#randomR").on("click", getRecipeRepos);
 
