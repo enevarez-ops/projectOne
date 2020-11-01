@@ -1,8 +1,21 @@
 h1 {
-    text-align: center;
-    color: black;
-    font-size: larger;
-    font-weight: bold;
-    background-color: red;
-};
+  text-align: center;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+  background-color: red;
+}
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+ul.recipes {
+  list-style-type: square;
+}
+ul.music {
+  list-style-type: square;
+}
