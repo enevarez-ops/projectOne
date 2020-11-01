@@ -19,7 +19,9 @@
     <h1>Taste the Music!</h1>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item">
+
+        
+          <a id ="randomR"class="navbar-item">
             <i class="fas fa-random fa-size 9x"></i>
           </a>
       
@@ -29,41 +31,92 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
+     
+    
+
+
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="assets/recipes.html">
-                  Recipes
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
                 </a>
-                <a class="navbar-item" href="assets/music.html">
-                  Music
-                </a>
-            
-              </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="assets/recipes.html">
+                            Recipes
+                        </a>
+                        <a class="navbar-item" href="assets/music.html">
+                            Music
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+<br>
+<div class="container">
+<div>
+    <div class="card">
+        <div class="card-image">
+          <figure class="image is-2by1">
+            <!-- <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60" -->
+            <!-- alt="food"> -->
+          <div id="recipePic"></div>
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-centered">YOUR LUCKY RECIPE</p>
             </div>
           </div>
+      
+          <div id="recipeChoice" class="content" id="recipeCard">
+           
+            <br>
+          </div>
+        </div>
+      </div
 
+</div>
+</div>
+<br>
+<div class="container">
+    <div>
+        <div class="card">
+            <div class="card-image">
+            
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title">MUSIC FOR YOUR TASTE BUDS</p>
+                  <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60g" alt="Music">
+                </div>
               </div>
+          
+              <div id="musicChoice" class="content"></div>
+              <br>  
+              <div id="tinyThing" class="content" style="font-size: 8px;">
+                    Subscirbe to deezer to get the best selection!
+                </div>
+              
             </div>
           </div>
-        </div>
-      </nav>
+    </div>
 
-            
-          </div>
-        </div>
-      </div>
-      
+</div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
