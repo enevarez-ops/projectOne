@@ -79,10 +79,4 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
   });
 
  
-var musicList = ["https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", "https://deezerdevs-deezer.p.rapidapi.com/search?q=shakira", "https://deezerdevs-deezer.p.rapidapi.com/search?q=jurrasicfive"];
-for (var i = 0; i< musicList.length; i++) {
-  var artistList = musicList[i];
-  console.log(musicList[i]);
-  artistList.text(musicList[i]);
-  $("#musicButton").append(artistList);
-}
+
