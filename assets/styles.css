@@ -24,8 +24,30 @@ ul.music {
   margin-right: auto;
   width: 50%;
 }
+<<<<<<< HEAD
 
 .tinyThing {
   font-size: 2px;
   font-weight: bold;
 }
+=======
+
+.card-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.tinyThing {
+    font-size: 2px;
+    font-weight: bold;
+}
+
+.music-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+>>>>>>> 2597934b3286372433d5c1dd245aea77f7c8ab43
