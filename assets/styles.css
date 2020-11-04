@@ -19,13 +19,22 @@ ul.recipes {
 ul.music {
   list-style-type: square;
 }
+
+.card-image{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-};
+}
 
 .tinyThing {
     font-size: 2px;
     font-weight: bold;
-};
+}
+
+.music-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
