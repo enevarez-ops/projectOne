@@ -20,7 +20,7 @@ $(document).ready(function(){
     })
     .then(function (data) {
       console.log(data);
-     var randomEl = $("<div>").text(data.meals[0].strMeal + data.meals[0].strInstructions + data.meals[0].strSource)
+     var randomEl = $("<a>").text(data.meals[0].strSource)
         $("#recipeChoice").append(randomEl);
         var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
         $("#recipePic").append(recipeImg);
@@ -59,4 +59,10 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
   });
 
  
-
+var musicList = ["https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", "https://deezerdevs-deezer.p.rapidapi.com/search?q=shakira", "https://deezerdevs-deezer.p.rapidapi.com/search?q=jurrasicfive"];
+for (var i = 0; i< musicList.length; i++) {
+  var artistList = musicList[i];
+  console.log(musicList[i]);
+  artistList.text(musicList[i]);
+  $("#musicButton").append(artistList);
+}
