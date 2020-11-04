@@ -20,14 +20,16 @@ $(document).ready(function(){
     })
     .then(function (data) {
       console.log(data);
-     var randomEl = $("<div>").text("Title: " + data.meals[0].strMeal + " Recipe: " + data.meals[0].strInstructions);
+     var randomEl = $("<a>").text("YouTube: " + data.meals[0].strYoutube);
         $("#recipeChoice").append(randomEl);
         var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
-        var recipeSrc = $("<a>").text("" + data.meals[0].strMeal).attr("href", data.meals[0].strSource);
+        var recipeSrc = $("<a>").text("" + data.meals[0].strMeal).attr("href", data.meals[0].strSource).attr("target", "_blank");
+        var recipeCat = $("<h3>").text("Category: " + data.meals[0].strCategory).attr("header", data.meals[0].strCategory);
         //targeting a new page with link
         // recipeSrc.attr(target="_blank");
         $("#recipePic").append(recipeImg);
         $("#recipeLink").append(recipeSrc);
+        $("#recipeCat").append(recipeCat);
       
    }) //add category and ingredients to .then 
 
