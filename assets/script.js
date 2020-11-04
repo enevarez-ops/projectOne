@@ -20,7 +20,7 @@ $(document).ready(function(){
     })
     .then(function (data) {
       console.log(data);
-     var randomEl = $("<div>").text(data.meals[0].strMeal + data.meals[0].strInstructions + data.meals[0].strSource)
+     var randomEl = $("<div>").text("Title: " + data.meals[0].strMeal + " Recipe: " + data.meals[0].strInstructions + data.meals[0].strSource)
         $("#recipeChoice").append(randomEl);
         var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
         $("#recipePic").append(recipeImg);
@@ -30,7 +30,7 @@ $(document).ready(function(){
   }
 
 //var songArry = ["lose yourself", "other song"]
-//function getsRandomSong() {
+//function getsRandomSong() {s
   // get a random song title from Song array
 
   //then call call getRandomMusic("Lose Yourself")
