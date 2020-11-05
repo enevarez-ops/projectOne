@@ -1,9 +1,13 @@
 h1 {
   text-align: center;
-  color: black;
+  color: white;
   font-size: larger;
   font-weight: bold;
-  background-color: red;
+  background-image: linear-gradient(blue, black);
+}
+
+body {
+  background-image: linear-gradient(white, black);
 }
 
 .center {
