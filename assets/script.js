@@ -6,13 +6,14 @@ $(document).ready(function(){
   $("#randomR").on("click", callFunction);
   
   function callFunction() {
-    console.log("inside callFunction");
+    //console.log("inside callFunction");
     getRandomMusic();
     getRecipeRepos();
+    grabTracks();
   }
 
   function getRecipeRepos() {
-  console.log('inside getRecipeRepos')
+  //console.log('inside getRecipeRepos')
     var requestUrl = "https://www.themealdb.com/api/json/v1/1/random.php"
     fetch(requestUrl)
     .then(function (response) {
@@ -39,7 +40,10 @@ $(document).ready(function(){
 
   //then call call getRandomMusic("Lose Yourself")
 
-function getRandomMusic() {
+
+
+
+  function getRandomMusic() {
 fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
 	"method": "GET",
 	"headers": {
@@ -50,12 +54,26 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
   return response.json()
 })
 .then(function(data) {
-  console.log(data)
-  for (i = 0; i <  data.length; i++){
-  var randomMusicEl = $("<div>").text("Your song: " + data[i].artist.name + " " + data[i].link);
-  $("#musicChoice").append(randomMusicEl);
-}
+  console.log(data.data[Math.floor(Math.random() * 10)]);
+  var newObj = data.data[Math.floor(Math.random() * 10)];
+  var title = newObj.title;
+  var artist = newObj.artist.name;
+  var img = $("<img>").attr("src", newObj.album.cover);
+  var newDiv = $("<div>").addClass("musicDisplay");
+  newDiv.append(title, artist, img);
+  $("#musicChoice").append(newDiv);
 })
+}
+
+});
+  
+  
+  
+  
+  // for (i = 0; i <  data.length; i++){
+  // var randomMusicEl = $("<div>").text("Your song: " + data[i].artist.name + " " + data[i].link);
+  // $("#musicChoice").append(randomMusicEl);
+//}
 
 
 //music button appending
@@ -74,9 +92,3 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
       // var randomMusicEl = $("<div>").text("Your song: " + data[0].artist.name + " " + data[0].link);
       // $("musicChoice").append(randomMusicEl);
     // });
-  }
-
-  });
-
- 
-
