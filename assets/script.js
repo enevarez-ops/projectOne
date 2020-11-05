@@ -9,7 +9,7 @@ $(document).ready(function(){
     //console.log("inside callFunction");
     getRandomMusic();
     getRecipeRepos();
-    grabTracks();
+   
   }
 
   function getRecipeRepos() {
@@ -26,7 +26,7 @@ $(document).ready(function(){
         var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
         var recipeSrc = $("<a>").text("" + data.meals[0].strMeal).attr("href", data.meals[0].strSource);
         //targeting a new page with link
-        // recipeSrc.attr(target="_blank");
+         recipeSrc.attr("target", "_blank");
         $("#recipePic").append(recipeImg);
         $("#recipeLink").append(recipeSrc);
       
