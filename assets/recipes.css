@@ -1,0 +1,56 @@
+h1 {
+  text-align: center;
+  color: firebrick;
+  font-size: larger;
+  font-weight: bold;
+  background-image: linear-gradient(lightsalmon, white);
+}
+
+.navbar-menu {
+  background-image: linear-gradient(white, lightsalmon);
+}
+
+body {
+  background-image: url("../images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+ul.recipes {
+  list-style-type: square;
+}
+ul.music {
+  list-style-type: square;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.tinyThing {
+  font-size: 2px;
+  font-weight: bold;
+}
+
+.music-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
