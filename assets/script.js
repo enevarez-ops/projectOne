@@ -21,14 +21,19 @@ $(document).ready(function(){
     })
     .then(function (data) {
       console.log(data);
-     var randomEl = $("<div>").text("Title: " + data.meals[0].strMeal + " Recipe: " + data.meals[0].strInstructions);
+     var randomEl = $("<a>").text("YouTube: " + data.meals[0].strYoutube);
         $("#recipeChoice").append(randomEl);
         var recipeImg = $("<img>").attr("src", data.meals[0].strMealThumb);
-        var recipeSrc = $("<a>").text("" + data.meals[0].strMeal).attr("href", data.meals[0].strSource);
+        var recipeSrc = $("<a>").text("" + data.meals[0].strMeal).attr("href", data.meals[0].strSource).attr("target", "_blank");
+        var recipeCat = $("<h3>").text("Category: " + data.meals[0].strCategory).attr("header", data.meals[0].strCategory);
         //targeting a new page with link
          recipeSrc.attr("target", "_blank");
         $("#recipePic").append(recipeImg);
         $("#recipeLink").append(recipeSrc);
+        $("#recipeCat").append(recipeCat);
+        // $("#recipePic").empty();
+        // $("#recipeLink").empty();
+        // $("#recipeChoice").empty();
       
    }) //add category and ingredients to .then 
 
@@ -44,24 +49,27 @@ $(document).ready(function(){
 
 
   function getRandomMusic() {
-fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-		"x-rapidapi-key": "748a15681fmshbba4031511d91cep19839fjsnbcb11ed54479"
+fetch("https://deezerdevs-deezer.p.rapidapi.com/playlist//us/playlist/1363560485", {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+    "x-rapidapi-key": "748a15681fmshbba4031511d91cep19839fjsnbcb11ed54479"
 }})
 .then(response => {
-  return response.json()
+  console.log(response);
+
+  return response.json();
+  
 })
 .then(function(data) {
-  console.log(data.data[Math.floor(Math.random() * 10)]);
-  var newObj = data.data[Math.floor(Math.random() * 10)];
-  var title = newObj.title;
-  var artist = newObj.artist.name;
-  var img = $("<img>").attr("src", newObj.album.cover);
-  var newDiv = $("<div>").addClass("musicDisplay");
-  newDiv.append(title, artist, img);
-  $("#musicChoice").append(newDiv);
+  // console.log(data.data[Math.floor(Math.random() * 10)]);
+  // var newObj = data.data[Math.floor(Math.random() * 10)];
+  // var title = newObj.title;
+  // var artist = newObj.artist.name;
+  // var img = $("<img>").attr("src", newObj.album.cover);
+  // var newDiv = $("<div>").addClass("musicDisplay");
+  // newDiv.append(title, artist, img);
+  // $("#musicChoice").append(newDiv);
 })
 }
 
