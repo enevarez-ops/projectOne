@@ -1,9 +1,13 @@
 h1 {
   text-align: center;
-  color: black;
+  color: white;
   font-size: larger;
   font-weight: bold;
-  background-color: red;
+  background-image: linear-gradient(blue, black);
+}
+
+body {
+  background-image: linear-gradient(white, black);
 }
 
 .center {
@@ -18,18 +22,23 @@ ul.recipes {
 }
 ul.music {
   list-style-type: square;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.card-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .tinyThing {
-    font-size: 2px;
-    font-weight: bold;
+  font-size: 2px;
+  font-weight: bold;
 }
 
 .music-image {
