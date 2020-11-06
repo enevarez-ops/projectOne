@@ -31,6 +31,9 @@ $(document).ready(function(){
         $("#recipePic").append(recipeImg);
         $("#recipeLink").append(recipeSrc);
         $("#recipeCat").append(recipeCat);
+        // $("#recipePic").empty();
+        // $("#recipeLink").empty();
+        // $("#recipeChoice").empty();
       
    }) //add category and ingredients to .then 
 
@@ -46,11 +49,11 @@ $(document).ready(function(){
 
 
   function getRandomMusic() {
-fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-		"x-rapidapi-key": "748a15681fmshbba4031511d91cep19839fjsnbcb11ed54479"
+fetch("https://deezerdevs-deezer.p.rapidapi.com/playlist//us/playlist/1363560485", {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+    "x-rapidapi-key": "748a15681fmshbba4031511d91cep19839fjsnbcb11ed54479"
 }})
 .then(response => {
   return response.json()
