@@ -12,14 +12,14 @@
 * [License](##-License)
  
 ## Deployed site
-[Title of Site](Site-Link)
-![gif for site](gif-link)
+[Taste the Music!](https://enevarez-ops.github.io/projectOne/)
+![Taste the Music!](tasteTheMusic1.gif)
  
 ## User Story
 AS A struggling chef I WANT to find recipes that will tickle my taste buds. WHILE I play music in the background. JUST LIKE pairing wine with pasta. THIS WILL pair food with music.
 
 ## Description
-AN app that pulls up a random recipe and playlist to accompany the food you are making. 
+AN app that pulls up a random recipe and random song selection to accompany the food you are making. 
  
 ## Installation
 Run on default browser
@@ -28,7 +28,7 @@ Run on default browser
 Christian Go, Amy Moseman, Amanda Rodriguez, Efrain Nevarez
  
 ## Credits
-Credits for anything used to build site
- 
+JQuery, Bulma, CSS, HTML, The Meal DB API, The Meal DB API
+
 ## License
 This project is licensed by MIT
