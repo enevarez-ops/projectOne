@@ -13,7 +13,7 @@
  
 ## Deployed site
 [Taste the Music!](https://enevarez-ops.github.io/projectOne/)
-![Taste the Music!](tasteTheMusic.gif)
+![Taste the Music!](tasteTheMusic1.gif)
  
 ## User Story
 AS A struggling chef I WANT to find recipes that will tickle my taste buds. WHILE I play music in the background. JUST LIKE pairing wine with pasta. THIS WILL pair food with music.
